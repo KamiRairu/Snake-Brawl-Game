@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game Brawl</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div id="startMenu">
+        <h1>Snake Game Brawl</h1>
+        <h2>Click to Start</h2>
+        <button id="playerVsAi">AI Only</button>
+        <button id="playerVsAiMode">Player VS AI</button>
+    </div>
+    
+    <div id="gameContainer" style="display: none;">
+        <canvas id="gameboard" width="600" height="400"></canvas>
+        <div id="scoreDisplay">
+            <span id="scoreText">Player Score: 0</span>
+            <span id="aiScoreText">AI Score: 0</span>
+        </div>
+        <button id="startBtn" class="start-button">Restart</button>
+        <button id="backToMenuBtn" class="back-button">Back to Menu</button>
+    </div>
+
+    <!-- Background music for menu -->
+    <audio id="menuMusic" src="theme.mp3" loop></audio>
+    <!-- Background music for game -->
+    <audio id="gameMusic" src="rival.mp3" loop></audio>
+    <audio id="gameOver" src="over.mp3" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>
