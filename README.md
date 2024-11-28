@@ -1,3 +1,10 @@
+Members:
+   Escabas
+   Duncano
+   Segovia
+
+
+
 -------- >How to play the game <---------
 
 There are two modes 
