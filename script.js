@@ -13,7 +13,7 @@ const playerVsAiMode = document.getElementById("playerVsAiMode");
 // audio elements
 const menuMusic = document.getElementById("menuMusic");
 const gameMusic = document.getElementById("gameMusic");
-const gameOverMusic = document.getElementById("gameOver");
+
 
 // ===================
 // Game Configuration
@@ -79,10 +79,6 @@ function startGame() {
         menuMusic.pause();
         menuMusic.currentTime = 0;
 
-        // Stop game over music if it's playing
-        gameOverMusic.pause();
-        gameOverMusic.currentTime = 0;
-        gameOverMusic.volume = 0.3;
         // Start game music
         gameMusic.volume = 0.4; // Set volume for game music
         gameMusic.play(); // Start playing game music
@@ -317,9 +313,6 @@ function checkGameOver() {
 function displayGameOver() {
     gameMusic.pause(); // Stop the game music
     gameMusic.currentTime = 0; // Reset to the start
-    // Play game over music
-    gameOverMusic.currentTime = 0; // Reset game over music
-    gameOverMusic.play(); // Start playing game over music
 
     const ctx = document.getElementById("gameboard").getContext("2d");
     ctx.fillStyle = "black";
@@ -345,7 +338,7 @@ function displayGameOver() {
 
 let mode = 'ai-only'
 
-document.getElementById("playerVsAi").addEventListener("click", () => {
+document.getElementById("Ai").addEventListener("click", () => {
     mode = 'ai-only'
     startGame()
 })
@@ -606,8 +599,7 @@ backToMenuBtn.addEventListener("click", () => {
     gameMusic.currentTime = 0; // Reset to the start
 
     // Stop and reset game over music
-    gameOverMusic.pause(); 
-    gameOverMusic.currentTime = 0;
+   
 
     // Show the start menu and hide the game container
     document.getElementById("gameContainer").style.display = "none";
