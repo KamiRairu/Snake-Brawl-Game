@@ -1,4 +1,4 @@
-How to playe the game
+-------- >How to play the game <---------
 There are two modes 
 1. Ai Only Mode
    The Ai will simulate how its behaviour.
